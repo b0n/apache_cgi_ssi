@@ -1,0 +1,8 @@
+services:
+        httpd:
+                image: httpd
+                ports:
+                        - ${APP_HTTP_PORT}:80
+                volumes:
+                        - ./public_html:/usr/local/apache2/htdocs
+                        - ./httpd.conf:/usr/local/apache2/conf/httpd.conf
